@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+        <meta charset="utf-8"/>
+        <title>Login</title>
     </head>
+    <header>
+        <script>
+            function realizarLogin(){
+                let usuario = document.getElementById("usuario").value;
+                let senha = document.getElementById("senha").value;
+
+                let usuariovalido = "Vinícius";
+                let senhavalida = "1234";
+
+                if ((usuario == usuariovalido && senha == senhavalida)){
+                    alert ("Login com sucesso");
+                }
+                else{
+                    alert ("Login falhou");
+                }
+            }
+        </script>
+    </header>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        Usuario: <br>
+        <input type = "text" id = "usuario"> <br>
+        Senha: <br>
+        <input type="password" id="senha"> <br>
+        <button type = "button" onclick="realizarLogin()">
+            Acessar
+        </button>      
     </body>
 </html>
