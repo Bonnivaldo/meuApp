@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        
+        <meta charset="utf-8"/>
+        <title>Login</title>
+    </head>
+    <header>
+        <script>
+            function realizarLogin(){
+                let usuario = document.getElementById("usuario").value;
+                let senha = document.getElementById("senha").value;
+
+                let usuariovalido = "Vinícius";
+                let senhavalida = "1234";
+
+                if ((usuario == usuariovalido && senha == senhavalida)){
+                    alert ("Login com sucesso");
+                }
+                else{
+                    alert ("Login falhou");
+                }
+            }
+        </script>
+    </header>
+    <body>
+        Usuario: <br>
+        <input type = "text" id = "usuario"> <br>
+        Senha: <br>
+        <input type="password" id="senha"> <br>
+        <button type = "button" onclick="realizarLogin()">
+            Acessar
+        </button>      
+    </body>
+</html>
